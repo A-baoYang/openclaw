@@ -4,6 +4,7 @@ read_when:
   - You want to understand which features may call paid APIs
   - You need to audit keys, costs, and usage visibility
   - You’re explaining /status or /usage cost reporting
+title: "API Usage and Costs"
 ---
 
 # API usage & costs
@@ -65,7 +66,8 @@ Semantic memory search uses **embedding APIs** when configured for remote provid
 
 - `memorySearch.provider = "openai"` → OpenAI embeddings
 - `memorySearch.provider = "gemini"` → Gemini embeddings
-- Optional fallback to OpenAI if local embeddings fail
+- `memorySearch.provider = "voyage"` → Voyage embeddings
+- Optional fallback to a remote provider if local embeddings fail
 
 You can keep it local with `memorySearch.provider = "local"` (no API usage).
 
